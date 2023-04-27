@@ -36,3 +36,93 @@
     transform: rotate(360deg);
   }
 }
+.bodyContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #61dafb;
+}
+.headContainer {
+  background-color: darkgray;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.headContainer input {
+  color: red;
+  font-style: oblique;
+}
+.darkTheme {
+  padding: 20px, 30px;
+  background-color: black;
+  color: white;
+  height: 800px;
+}
+.whiteTheme {
+  padding: 20px, 30px;
+  background-color: white;
+  color: red;
+  height: 800px;
+}
+.title {
+  color: red;
+  font-style: italic;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.AppContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bodyContainer {
+  display: inline-block;
+  height: 100px;
+  width: 300px;
+}
+.imageContainer {
+  display: inline-block;
+}
+.Button1 {
+  background-color: red;
+  color: white;
+}
+.Button2 {
+  background-color: green;
+  color: white;
+}
+.classButton {
+  border: 2px black;
+  padding: 10px;
+}
+.loginContent {
+  border: 2px solid whitesmoke;
+  width: 242px;
+  padding-right: 17px;
+  padding-left: 33px;
+  top: 50px;
+  padding-top: 10px;
+  border-radius: 10%;
+  background-color: antiquewhite;
+}
+.buttonContent button {
+  position: relative;
+  left: 65px;
+  align-content: center;
+  color: white;
+  background-color: green;
+}
+.dataContainer {
+  display: flex;
+}
+.rowClass {
+  color: whitesmoke;
+}
+.tableContainer {
+  position: relative;
+  left: 70px;
+  width: 7-px;
+}
+.class2 {
+  color: #61dafb;
+}

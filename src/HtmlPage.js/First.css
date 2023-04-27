@@ -1,0 +1,13 @@
+.inputContainer {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  border: 2px solid black;
+  bottom: 10px;
+  box-shadow: 5px 10px #888888;
+}
+input {
+  padding: 2px;
+  margin: 10px;
+  margin-top: 10px;
+}
