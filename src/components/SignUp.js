@@ -6,19 +6,18 @@ import DenseTable from "./TableDataPagination";
 import { useDispatch, useSelector } from "react-redux";
 export default function BasicTextFields() {
   const [data, setData] = useState({});
-  //const [tableData, setTableData] = useState([]);
+
   const [isValue, setIsValue] = useState(false);
   const dispatch = useDispatch();
   const count = useSelector((state) => {
     return state.count;
   });
-  // console.log("::::::>intial state", count);
 
   function handleChange(e) {
     setData({ ...data, [e.target.name]: e.target.value });
   }
 
-  const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  // const mailformat = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   let { fName = "", password = "", email = "", number = "" } = data;
 
   function handleSubmit(e) {
@@ -40,7 +39,7 @@ export default function BasicTextFields() {
     setIsValue(true);
     // }
     dispatch({
-      type: "SAVED DATA",
+      type: "SAVED_DATA",
       payload: {
         index: count.length + 1,
         fName: fName,

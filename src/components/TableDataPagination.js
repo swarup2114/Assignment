@@ -6,12 +6,13 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function DenseTable() {
   const count = useSelector((state) => {
     return state.count;
   });
+  const dispatch = useDispatch();
 
   const toDoPerPage = 5;
 
@@ -29,7 +30,14 @@ export default function DenseTable() {
   }
 
   const visibeData = count.slice(firstIndex, lastIndex);
+  function deleteclick(indexValue) {
+    dispatch({
+      type: "DELETE_DATA",
+      payload: indexValue,
+    });
+  }
 
+  console.log(visibeData);
   return (
     <>
       <TableContainer component={Paper}>
@@ -63,7 +71,7 @@ export default function DenseTable() {
             {visibeData.map((item, index) => (
               <TableRow
                 key={index}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{ "&:last-child td, &:last-child npm th": { border: 0 } }}
               >
                 <TableCell component="th" scope="row">
                   {item.index}
@@ -73,7 +81,7 @@ export default function DenseTable() {
                 <TableCell align="center">{item.email}</TableCell>
                 <TableCell align="center">{item.number}</TableCell>
                 <TableCell align="center">
-                  <button>Delete</button>
+                  <button onClick={() => deleteclick(index)}>Delete</button>
                 </TableCell>
               </TableRow>
             ))}
